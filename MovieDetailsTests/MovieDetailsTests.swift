@@ -9,26 +9,66 @@
 import XCTest
 @testable import MovieDetails
 
+
+
 class MovieDetailsTests: XCTestCase {
+    
+    private var app: XCUIApplication!
+    
+     override func setUp() {
+       super.setUp()
+       
+     }
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+
+    func testBaseURLString() {
+        
+        let baseString = "https://raw.githubusercontent.com/FEND16/movie-json-data/master/json/top-rated-indian-movies-01.json"
+        let networkClient = NetworkClient()
+        
+        
+        XCTAssert(networkClient.baseURLString == baseString, "Base URL String is wrong.")
     }
+    
+ 
+    func testMovieListControllerHasTableView() {
+    
+    guard let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "movieList") as? MovieListViewController else {
+          return XCTFail("Could not instantiate ViewController from main storyboard")
+      }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+      controller.loadViewIfNeeded()
+        
+      XCTAssertNotNil(controller.tableView,
+                      "Controller should have a tableview")
+        
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    
+    
+    func testMovieDetailControllerHasTableView() {
+      
+      guard let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "movieDetail") as? MovieDetailViewController else {
+            return XCTFail("Could not instantiate ViewController from main storyboard")
         }
-    }
+
+        controller.loadViewIfNeeded()
+          
+        XCTAssertNotNil(controller.tableView,
+                        "Controller should have a tableview")
+          
+      }
+    
+    
+    
+    
+    
+  
+    
+    
+    
+
+ 
 
 }
