@@ -38,7 +38,7 @@ class MovieDetailViewController: UITableViewController {
         
         genreLabel.text = "Genre: \(movie.genres.compactMap{$0}.joined(separator: ", "))"
         
-        imdbLabel.text = "IMBD: \(movie.imdbRating)"
+        imdbLabel.text = "IMDb: \(movie.imdbRating)"
 
         actorsLabel.text = "Actors: \(movie.actors.compactMap{$0}.joined(separator: ", "))"
         

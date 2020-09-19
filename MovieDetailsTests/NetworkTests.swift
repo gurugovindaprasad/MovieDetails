@@ -19,6 +19,7 @@ class NetworkTests: XCTestCase {
           
           var isMovieReceived = false
           var receivedMovie: [Movie]?
+          var errorMessage = ""
         
         
         service.requestMovies {  result in
@@ -28,13 +29,15 @@ class NetworkTests: XCTestCase {
         case .success(let movie):
              isMovieReceived = true
              receivedMovie = movie
-         case .failure(_):
+         case .failure(let error):
              isMovieReceived = false
+             errorMessage = error.rawValue
         }
         }
         
           XCTAssert(isMovieReceived == false)
           XCTAssert(receivedMovie == nil)
+          XCTAssertEqual(errorMessage, "Something went wrong. Sorry for the inconvinence.")
           
       }
     

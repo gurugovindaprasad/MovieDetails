@@ -19,7 +19,9 @@ class MockNetworkClient:NetworkSession  {
     
     init(isSuccessMock: Bool) {
         self.shouldMockSuccessCondition = isSuccessMock
+        if isSuccessMock {
         self.movie.append(Movie(title: "test", year: "test", genres: ["a","b"], storyline: "test", actors: ["test", "test"], imdbRating: 4.0, posterurl: "imageurl"))
+        }
     }
     
     func requestMovies(completion: @escaping ((Result<[Movie], NetworkError>) -> Void))  {
@@ -30,6 +32,5 @@ class MockNetworkClient:NetworkSession  {
             completion(.failure(.badURL))
         }
     }
-    
 
 }

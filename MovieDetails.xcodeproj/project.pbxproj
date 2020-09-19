@@ -10,6 +10,7 @@
 		0396FA772CE728A13083296C /* Pods_MovieDetails.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB554F7B3858E141AB0307C3 /* Pods_MovieDetails.framework */; };
 		CA3A3D8E25161E6A0063F66E /* MockNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A3D8D25161E6A0063F66E /* MockNetworkClient.swift */; };
 		CA3A3D9025161F4E0063F66E /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3A3D8F25161F4E0063F66E /* NetworkTests.swift */; };
+		CA3A3D92251635BD0063F66E /* mock.json in Resources */ = {isa = PBXBuildFile; fileRef = CA3A3D91251635BD0063F66E /* mock.json */; };
 		CACCD0512514A2E600C07AC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACCD0502514A2E600C07AC4 /* AppDelegate.swift */; };
 		CACCD0532514A2E600C07AC4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACCD0522514A2E600C07AC4 /* SceneDelegate.swift */; };
 		CACCD0552514A2E600C07AC4 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACCD0542514A2E600C07AC4 /* MovieListViewController.swift */; };
@@ -42,6 +43,7 @@
 		3D04FA3C0FB4A19C109B3590 /* Pods-MovieDetails.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieDetails.debug.xcconfig"; path = "Target Support Files/Pods-MovieDetails/Pods-MovieDetails.debug.xcconfig"; sourceTree = "<group>"; };
 		CA3A3D8D25161E6A0063F66E /* MockNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkClient.swift; sourceTree = "<group>"; };
 		CA3A3D8F25161F4E0063F66E /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
+		CA3A3D91251635BD0063F66E /* mock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mock.json; sourceTree = "<group>"; };
 		CACCD04D2514A2E600C07AC4 /* MovieDetails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieDetails.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CACCD0502514A2E600C07AC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CACCD0522514A2E600C07AC4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,9 +134,10 @@
 			isa = PBXGroup;
 			children = (
 				CA3A3D8D25161E6A0063F66E /* MockNetworkClient.swift */,
-				CACCD0672514A2E700C07AC4 /* MovieDetailsTests.swift */,
 				CA3A3D8F25161F4E0063F66E /* NetworkTests.swift */,
+				CACCD0672514A2E700C07AC4 /* MovieDetailsTests.swift */,
 				CACCD0692514A2E700C07AC4 /* Info.plist */,
+				CA3A3D91251635BD0063F66E /* mock.json */,
 			);
 			path = MovieDetailsTests;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA3A3D92251635BD0063F66E /* mock.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,7 +532,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.guru.MovieDetails;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -547,7 +551,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.guru.MovieDetails;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
