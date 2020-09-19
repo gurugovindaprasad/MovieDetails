@@ -31,21 +31,8 @@ class MovieDetailsTests: XCTestCase {
         XCTAssert(networkClient.baseURLString == baseString, "Base URL String is wrong.")
     }
     
- 
-    func testMovieListControllerHasTableView() {
-    
-    guard let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "movieList") as? MovieListViewController else {
-          return XCTFail("Could not instantiate ViewController from main storyboard")
-      }
-
-      controller.loadViewIfNeeded()
-        
-      XCTAssertNotNil(controller.tableView,
-                      "Controller should have a tableview")
-        
-    }
-    
-    
+     
+    // To test if there is a detail view controller is present in Story Board
     
     func testMovieDetailControllerHasTableView() {
       
@@ -59,6 +46,9 @@ class MovieDetailsTests: XCTestCase {
                         "Controller should have a tableview")
           
       }
+    
+    
+    
     
     
     

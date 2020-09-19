@@ -2,10 +2,16 @@ import Foundation
 
 
 enum NetworkError: String, Error {
-    case badURL = "Something went wrong.Sorry for the inconvinence."
+    case badURL = "Something went wrong. Sorry for the inconvinence."
 }
 
-class NetworkClient
+
+protocol NetworkSession {
+   func requestMovies(completion: @escaping ((Result<[Movie], NetworkError>) -> Void))
+}
+
+
+class NetworkClient: NetworkSession
 {
     let defaultSession = URLSession(configuration: .default)
     
@@ -29,10 +35,10 @@ class NetworkClient
             
             do {
                 let jsonDecoder = JSONDecoder()
-                jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
                 let movieResponse = try jsonDecoder.decode([Movie].self, from: data)
                 completion(.success(movieResponse))
             } catch {
+                print(error.localizedDescription)
                  completion(.failure(.badURL))
             }
         })

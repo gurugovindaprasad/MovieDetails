@@ -76,7 +76,7 @@
                         <sections>
                             <tableViewSection headerTitle="Poster" id="SC8-G0-92U">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="375" id="VYj-0H-eZy">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="375" id="VYj-0H-eZy">
                                         <rect key="frame" x="0.0" y="28" width="375" height="375"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VYj-0H-eZy" id="04n-g2-9si">
@@ -99,42 +99,63 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Movie Details" id="BaY-25-9cw">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="181" id="e0g-sp-9il">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="181" id="e0g-sp-9il">
                                         <rect key="frame" x="0.0" y="459" width="375" height="181"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e0g-sp-9il" id="PbO-20-m21">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="181"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="U3u-28-6SW">
-                                                    <rect key="frame" x="16" y="15" width="343" height="155"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="rGS-8m-yIk" userLabel="MovieDetailStack">
+                                                    <rect key="frame" x="16" y="15" width="343" height="151"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Baasha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJN-eY-9iY">
-                                                            <rect key="frame" x="0.0" y="0.0" width="89.5" height="33.5"/>
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                                            <nil key="textColor"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QzC-SJ-zGT" userLabel="MovieNameStack">
+                                                            <rect key="frame" x="0.0" y="0.0" width="341" height="24"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Baasha" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="zJN-eY-9iY">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="64.5" height="24"/>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="IMBD: 7.8" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zn9-03-Rop">
+                                                                    <rect key="frame" x="74.5" y="0.0" width="266.5" height="24"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Action" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ukz-kA-eDs">
+                                                            <rect key="frame" x="0.0" y="47" width="48.5" height="20"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                            <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1996" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPn-Vm-LLo">
-                                                            <rect key="frame" x="0.0" y="38.5" width="37" height="19.5"/>
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
-                                                            <nil key="textColor"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Actors: Rajni, Nagma, JankakaRaj" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UP2-d4-tF9">
+                                                            <rect key="frame" x="0.0" y="90" width="228" height="17.5"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Movie Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a25-mB-Pix">
-                                                            <rect key="frame" x="0.0" y="63" width="138" height="92"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Movie Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a25-mB-Pix">
+                                                            <rect key="frame" x="0.0" y="130.5" width="138" height="20.5"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="QzC-SJ-zGT" secondAttribute="trailing" constant="2" id="c7U-SN-Dxu"/>
+                                                        <constraint firstItem="QzC-SJ-zGT" firstAttribute="leading" secondItem="rGS-8m-yIk" secondAttribute="leading" id="fXa-nb-Run"/>
+                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="U3u-28-6SW" firstAttribute="top" secondItem="PbO-20-m21" secondAttribute="topMargin" constant="4" id="1zD-Ye-k96"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="U3u-28-6SW" secondAttribute="bottom" id="Evq-L6-sCd"/>
-                                                <constraint firstItem="U3u-28-6SW" firstAttribute="leading" secondItem="PbO-20-m21" secondAttribute="leadingMargin" id="N4E-bK-gZG"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="U3u-28-6SW" secondAttribute="trailing" id="nfP-Dh-VYh"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="rGS-8m-yIk" secondAttribute="trailing" id="6vN-r3-Saj"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="rGS-8m-yIk" secondAttribute="bottom" constant="4" id="98A-Q1-Al6"/>
+                                                <constraint firstItem="rGS-8m-yIk" firstAttribute="leading" secondItem="PbO-20-m21" secondAttribute="leadingMargin" id="Nhh-nB-jDr"/>
+                                                <constraint firstItem="rGS-8m-yIk" firstAttribute="top" secondItem="PbO-20-m21" secondAttribute="topMargin" constant="4" id="WuM-3M-kzG"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -147,15 +168,17 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="actorsLabel" destination="UP2-d4-tF9" id="fdB-OB-jBU"/>
                         <outlet property="descriptionLabel" destination="a25-mB-Pix" id="b60-IA-vyA"/>
+                        <outlet property="genreLabel" destination="Ukz-kA-eDs" id="y6q-tT-4yU"/>
+                        <outlet property="imdbLabel" destination="Zn9-03-Rop" id="gom-Wf-Ee9"/>
                         <outlet property="posterImageView" destination="zgD-8A-sUe" id="7cV-7H-Sm1"/>
                         <outlet property="titleLabel" destination="zJN-eY-9iY" id="oMI-r9-L8h"/>
-                        <outlet property="yearLabel" destination="yPn-Vm-LLo" id="5Sl-3b-0zW"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0mo-pJ-ydW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1942" y="65"/>
+            <point key="canvasLocation" x="1941.5999999999999" y="64.31784107946028"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="C3p-SE-tgM">

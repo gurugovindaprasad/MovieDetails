@@ -62,10 +62,7 @@ class MovieListViewController: UITableViewController {
         
         let movie = movies[indexPath.row]
         
-        cell.titleLabel.text =  movie.title
-        
-         // using sdwebimagecache - An asynchronous image downloader
-        cell.posterImage.sd_setImage(with: URL(string: movie.posterurl), placeholderImage: UIImage(named: "default"))
+        cell.configure(with: movie)
         
         return cell
     }
@@ -79,6 +76,5 @@ class MovieListViewController: UITableViewController {
         
         navigationController?.pushViewController(vc, animated: true)
     }
-
 
 }

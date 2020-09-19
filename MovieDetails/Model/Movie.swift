@@ -11,8 +11,14 @@ import Foundation
 struct Movie: Codable {
     
     var title: String
-    var posterurl: String
-    var storyline: String
     var year: String
+    var genres: [String]
+    var storyline: String
+    var actors: [String]
+    var imdbRating: Double
+    var posterurl: String
+
+    
+    
     
 }
